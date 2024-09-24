@@ -1,5 +1,5 @@
 import axios from "axios"
-import { response } from "express"
+import prismaCliente from "../prisma"
 
 interface IAccessTokenResponse {
 	access_token: string
@@ -36,6 +36,25 @@ export default class AuthenticateUserService {
 				},
 			}
 		)
+
+		const { avatar_url, id, login, name } = response.data
+
+		const user = await prismaCliente.user.findFirst({
+			where: {
+				github_id: id,
+			},
+		})
+
+		if (!user) {
+			await prismaCliente.user.create({
+				data: {
+					github_id: id,
+					avatar_url,
+					login,
+					name,
+				},
+			})
+		}
 
 		return response.data
 	}

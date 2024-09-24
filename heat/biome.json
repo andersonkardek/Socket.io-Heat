@@ -7,7 +7,7 @@
 	},
 
 	"files": {
-		"ignore": ["node_modules", "*.http"]
+		"ignore": ["node_modules"]
 	},
 	"formatter": {
 		"enabled": true,
