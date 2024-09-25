@@ -7,8 +7,12 @@ export default class AuthenticateUserController {
 
 		const service = new AuthenticateUserService()
 
-		const result = await service.execute(code)
+		try {
+			const result = await service.execute(code)
 
-		return response.json(result)
+			return response.json(result)
+		} catch (err) {
+			console.log({ error: err.message })
+		}
 	}
 }

@@ -3,5 +3,5 @@ POST http://localhost:4000/authenticate
 Content-Type: application/json 
 
 {
-  "code": "9a3585220346b60c329a"
+  "code": "c6460bb2c3495398f475"
 }
