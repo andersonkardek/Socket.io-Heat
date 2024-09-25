@@ -3,5 +3,15 @@ POST http://localhost:4000/authenticate
 Content-Type: application/json 
 
 {
-  "code": "c6460bb2c3495398f475"
+  "code": "a5d13391368a18486a33"
+}
+
+###
+
+POST http://localhost:4000/messages
+Content-Type: application/json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Im5hbWUiOiJBbmRlcnNvbiBLYXJkZWsiLCJhdmF0YXJfdXJsIjoiaHR0cHM6Ly9hdmF0YXJzLmdpdGh1YnVzZXJjb250ZW50LmNvbS91LzU3NTA0OTI1P3Y9NCIsImlkIjoiNmVlMGNjODctZGZlMC00OTc1LTg4MzQtNWViNGFiYjk2ZjZmIn0sImlhdCI6MTcyNzI1OTk3MSwiZXhwIjoxNzI3MzQ2MzcxLCJzdWIiOiI2ZWUwY2M4Ny1kZmUwLTQ5NzUtODgzNC01ZWI0YWJiOTZmNmYifQ.zR31B5OE4Q-CSGwmKZTHbd-MjjOOj-wQFujIpDPK5j4
+
+{
+  "message": "Minha mensagem teste"
 }
