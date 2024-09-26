@@ -1,4 +1,4 @@
-import { Request, Response } from "express"
+import { Request, Response, text } from "express"
 import { CreateMessageService } from "../services/CreateMessageService"
 
 export class CreateMessageController {
