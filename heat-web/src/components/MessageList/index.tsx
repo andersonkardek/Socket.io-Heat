@@ -44,7 +44,7 @@ export function MessageList() {
 
 	return (
 		<div className={styles.messageListWrapper}>
-			<h1>Messages via socket</h1>
+			<h1>Mensagens via socket</h1>
 
 			<ul className={styles.messageList}>
 				{messages.map(message => {
