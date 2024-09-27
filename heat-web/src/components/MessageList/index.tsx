@@ -1,3 +1,4 @@
+import styles from "./styles.module.scss"
 export function MessageList() {
-	return <h1>message</h1>
+	return <div className={styles.messageListWrapper}>oi</div>
 }
