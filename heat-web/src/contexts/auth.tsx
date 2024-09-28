@@ -34,7 +34,7 @@ export function AuthProvider(props: AuthProvider) {
 	const [user, setUser] = useState<User | null>(null)
 
 	const signInUrl =
-		"https://github.com/login/oauth/authorize?scope=user&client_id=a5d13391368a18486a33"
+		"https://github.com/login/oauth/authorize?scope=user&client_id=Ov23li4bAoF4yAtQSU8f"
 
 	async function signIn(githubCode: string) {
 		const response = await api.post<AuthResponse>("authenticate", {
@@ -62,6 +62,7 @@ export function AuthProvider(props: AuthProvider) {
 			api.defaults.headers.common.authorization = `Bearer ${token}`
 
 			api.get<User>("profile").then(response => {
+				console.log(response.data)
 				setUser(response.data)
 			})
 		}
@@ -76,7 +77,7 @@ export function AuthProvider(props: AuthProvider) {
 			const [urlWithoutCode, githubCode] = url.split("?code=")
 
 			window.history.pushState({}, "", urlWithoutCode)
-
+			console.log(githubCode)
 			signIn(githubCode)
 		}
 	}, [])

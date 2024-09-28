@@ -26,6 +26,8 @@
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
+    cursor: pointer;
+    pointer-events: auto;
 
     display: flex;
     align-items: center;
